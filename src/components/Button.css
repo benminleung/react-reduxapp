@@ -1,0 +1,26 @@
+:root {
+	--shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	--shadow-active: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	--shadow-hover: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);     
+}
+
+.nextButton {
+	display: block;
+	padding: 1em 0em;
+	width: 12em;
+	text-align: center;
+	background-color: #00AFF2;
+  	color: inherit;
+	border: 1px solid #00AFF2;
+	text-decoration: none;
+	border-radius: 5px;
+	box-shadow: var(--shadow);
+}
+.nextButton:hover {
+	background-color: #0092cc;
+	border: 1px solid #0092cc;
+}
+
+.nextButton:active {
+	box-shadow: var(--shadow-active);
+}
