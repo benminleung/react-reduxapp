@@ -1,26 +1,69 @@
 :root {
 	--shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	--shadow-active: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	--shadow-hover: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);     
+	--shadow-hover: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);  
+	--colorAlert: tomato;
+	--colorAlertShade: rgb(255, 81, 50);
+	--colorDefault: #00AFF2;
+	--colorDefaultShade: #0098d2;
+	--colorNeutral: #ddd;
+	--colorNeutralShade: #ccc;
+	--colorAmber: #F9A602;
+	--colorAmberShades: rgb(225, 151, 3);
 }
 
-.nextButton {
+.Button {
 	display: block;
 	padding: 1em 0em;
 	width: 12em;
 	text-align: center;
-	background-color: #00AFF2;
-  	color: inherit;
-	border: 1px solid #00AFF2;
 	text-decoration: none;
-	border-radius: 5px;
+	border-radius: 50px;
 	box-shadow: var(--shadow);
-}
-.nextButton:hover {
-	background-color: #0092cc;
-	border: 1px solid #0092cc;
+	margin: 1em;
+	color: var(--primary-color);
 }
 
-.nextButton:active {
+.ButtonDefault {
+	background-color: var(--colorDefault);
+	border: 1px solid var(--colorDefault);
+	color: white;
+}
+.ButtonDefault:hover {
+	background-color: var(--colorDefaultShade);
+	border: 1px solid var(--colorDefaultShade);
+}
+
+.Button:active {
 	box-shadow: var(--shadow-active);
+}
+
+
+.ButtonAlert {
+	background-color: var(--colorAlert);
+	border: 1px solid var(--colorAlert);
+}
+.ButtonAlert:hover {
+	background-color: var(--colorAlertShade);
+	border: 1px solid var(--colorAlertShade);
+}
+
+.ButtonNeutral {
+	background-color: var(--colorNeutral);
+	border: 1px solid var(--colorNeutral);
+	color: var(--primary-color);
+}
+.ButtonNeutral:hover {
+	background-color: var(--colorNeutralShade);
+	border: 1px solid var(--colorNeutralShade);
+}
+
+.ButtonAmber {
+	background-color: var(--colorAmber);
+	border: 1px solid var(--colorAmber);
+	color: var(--primary-color);
+}
+.ButtonAmber:hover {
+	background-color: var(--colorAmberShades);
+	border: 1px solid var(--colorAmberShades);
 }

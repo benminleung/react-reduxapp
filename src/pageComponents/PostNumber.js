@@ -1,23 +1,38 @@
 import React from 'react';
+
+import { connect } from 'react-redux'
+
 import { Button } from '../components/Button';
+import { DELETE_POST } from '../actions';
 
-
-export const PostNumber = (props) => (
+const PostNumber = (props) => (
     <section>
-        <div></div>
-        <div>
-            <h1>Title: {props.post.title}</h1>
-            <h1>{props.id}</h1>
+        <div className='buttonsBar'>
+            <Button text='Back to Posts' type='neutral' toLink='home'/>
         </div>
         <div>
-            <h1>Category: {props.post.category}</h1>
+            <h1>{props.post.title}</h1>
+            <h3>by {props.post.name}</h3>
+        </div>
+        <div>
+            <h3>Category: {props.post.category}</h3>
         </div>
         <div>
             <p>{props.post.text}</p>
         </div>
-        <div>
-            <Button text='Back to Posts' toLink='home'/>
-            <Button text='Delete Post' toLink='home' click={()=>props.deletePost(props.post.id)}/>
+        <div className='buttonsBar'>
+            <Button text='Edit' type='amber'/>
+            <Button text='Delete Post' toLink='home' type='alert' click={()=>props.posts(props.post)}/>
         </div>
     </section>
 )
+
+const mapStateToProps = state => {
+    return {data: state}
+}
+
+const mapDispatchToProps = dispatch => {
+    return {posts: data => dispatch({ type: DELETE_POST, data: data })}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostNumber);
